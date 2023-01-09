@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   fig.width=9, fig.height=3.5, fig.retina=3,
   out.width = "100%",
   cache = FALSE,
-  echo = TRUE,
+  echo = FALSE,
   message = FALSE, 
   warning = FALSE,
   hiline = TRUE
@@ -79,6 +79,8 @@ h1, h2, h3 {
 <br>
 <br>
 <br>
+<br>
+<br>
 
 #### Francisco Villarroel-Riquelme (CICS- UDD) 
 
@@ -117,7 +119,7 @@ h1, h2, h3 {
 }
 .bg_karl::before {    
       content: "";
-      background-image: url('https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/05191207/Political-Leaders.png');
+      background-image: url('https://revistaespejo.com/wp-content/uploads/2023/01/intervencion-brasil.webp');
       background-size: cover;
       position: absolute;
       top: 0px;
@@ -162,16 +164,20 @@ knitr::include_graphics("beamer_files/paper5.png")
 ### Situación:
 
 - Existe suficiente evidencia que muestra que para entender la relación líder-seguidor, **la personalidad importa**
+
 - Uno de los test de personalidad más utilizado es el "Big five" (BFI)
+
 - En los últimos años se han realizado mejoras y subescalas al Big Five y se crea el Big Five Inventory 2 (BFI-2)
+
 - **Problema: ¡Tiene 60 ítemes!**
+
 ]
 ---
 background-image: url(pitch_files/logo2017a.png)
 background-size: 170px
 
 
-...¿Cómo medir la personalidad usando menos tiempo y de manera confiable?
+**...¿Cómo medir la personalidad usando menos tiempo y de manera confiable?**
 
 --
 
@@ -186,25 +192,92 @@ knitr::include_graphics("beamer_files/bfi_2_s_xs.png")
 background-image: url(pitch_files/logo2017a.png)
 background-size: 170px
 
+### ¿Qué es el BFI-2?
+
+.pull-left[
+
+- **Es una medición jerarquica de los dominios de personalidad** del Big five + 15 "facetas" con rasgos específicos
+- Contiene 60 ítemes. 6 ítemes por dominio y 3 por faceta
+- Sus respuestas son una escala likert de 5 puntos desde "Muy en desacuerdo a "Muy de acuerdo". 
+
+]
+
+
+--
+
+.pull-right[
+
+- puedes ver las distintas versiones e idiomas [en el siguiente link](https://www.colby.edu/psych/personality-lab/)
+
+]
+
+
+
+
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
 ## Forma de construcción
 
-- Primero se arma la escala BFI-2-XS (15 ítemes. 1 por faceta, 3 por dominio)
+- Primero se arma la escala BFI-2-XS (15 ítemes. 1 por faceta, 3 por dominio) en base al BFI-2 original
 
-- Se eleccionan ítemes que:
+--
 
-  - 1) Correlacionen bien entre cada ítem de faceta con la escala total
+- Utilizando una bbdd de validación del BFI-2, se eleccionan ítemes que:
 
-  - 2) Información total provista por cada retest de la composición de los dos ítemes
+  - 1) Correlacionen cada ítem de faceta con la escala total
 
-  - 3) Reliability del retest de composición en la muestra de college y undergraduated.
+--
 
-  - 4) Correlación inter-item dentro de cada composición de facetas (debe ser poderosa para mostrar consistencia pero no tanta que implique redundancia)
+  - 2) Que la carga factorial (vía CFA).
 
-  - 5) Juicios conceptuales de los autores de bondad vs reduncdancia
+--
 
-  - 6) Ños patrones de carga de cada ítem en el AFEy el ACP del BFI-2-S que se extrajo
+  - 3) Item Response Theory sobre la información que pŕovee sobre el rasgo de personalidad. 
+
+--
+
+  - 4) "Juicios conceptuales" respecto de los contenidos que representa cada item en el significado total de la escala.
+  
+--
+
+  - 5) Confiabilidad a partir del re-testeo en la muestra de college
+  
+--
+
+  - 6) Los patrones de carga de cada ítem en el AFE y el ACP del BFI-2-S que se extrajo
+
+--
 
   - 7) Asegurarse que el BFI-2-S incluya un ítem verdadero y otro falso para cada faceta.
+  
+---
+
+### Selección de ítemes y Construcción de BFI-2-S
+
+Todos estos criterios se usaron para armar una escala de 15 ítemes que diera cuenta de todos los dominios del BFI-2, que sean confiables, que teengan una estructura del bigfive y que minimice la aquiescencia.
+
+- 7 de los 15 criterios resultaron en una sola sugerencia, mientras que 6 sugirieron 2 alternativas, y dos facetas fueron sugeridos tres ítemes. Para elegir se analizaron fortalezas y debilidades por cada ítem.
+
+#### BFI-2-XS
+
+- Se seleccionaron bajo criterios similares, con la condición de correlacionen entre cada ítem (consistencia), pero no mucho (para evitar redundancia)
+- 10 de 15 ítemes cumplieron esos criterios. Los otros 5 se eligieron a partir de la calidad del ítem. 
+
+
+
+---
+
+### BFI-2-XS Y S
+
+
+```{r, out.width="65%", fig.align='center'}
+knitr::include_graphics("beamer_files/BFI-2-S-XS_spanish.png")
+```
+
+
 
 ---
 background-image: url(pitch_files/logo2017a.png)
@@ -212,11 +285,19 @@ background-size: 170px
 
 ## Propiedades psicométricas
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="90%", fig.align='center'}
 
 knitr::include_graphics("beamer_files/propiedades_psicometricas.png")
 
 ```
+
+--
+
+- BFI-2-S: m=0.95 (.94 - .97) | $\alpha$: m= .85 (.82 - .90)
+- BFI-2-XS: m=.89 (.86 - .92) | $\alpha$: m= .77 (.59 - .62) -> Leve decaimiento
+
+---
+
 
 
 
@@ -246,7 +327,7 @@ background-size: 170px
 ---
 class: inversed, center, middle
 background-image: url(https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
-background-size: 80px
+background-size: 70px
 background-position: 50% 90%
 
 # ¡Gracias!
@@ -254,7 +335,7 @@ background-position: 50% 90%
 
 ###fvillarroelr@udd.cl
 
-This slide was created by [**xaringan**](https://github.com/yihui/xaringan) package.
+  <font size="-1">Este slide fue creado con el paquete</font> <a href="https://github.com/yihui/xaringan">**xaringan**</a>
 
 ---
 class: inversed, center, middle
@@ -321,20 +402,6 @@ knitr::include_graphics("proyecto_denise_03.png")
 ```
 
 ---
-background-image: url(pitch_files/logo2017a.png)
-background-size: 170px
-background-position: 97% 7%
-class: left, middle
-
-###¿Por qué con un juego de bienes públicos?
-
-- Las distintas acciones colectivas requieren inversión de recursos (tiempo, dinero, habilidades, etc)
-- Esta inversión de recursos puede tener resultados positivos o no (efecto del umbral)
-- Los beneficios son para todo el grupo que realizó esa acción colectiva
-- En ciertos contextos, estas se hacen varias veces (juego repetido) y en competencia con otros
-- Dependiendo de los sistemas de liderazgo presentes, el líder puede desplegar estrategias hacia sus seguidores que pueden tener distintos efectos.
-
----
 class: left, middle
 
 ### Características de las condiciones experimentales
@@ -350,19 +417,4 @@ class: left, middle
 ```{r, echo=FALSE, out.width="100%", fig.align='center'}
 knitr::include_graphics("proyecto_denise_02.png")
 ```
-
----
-background-image: url(pitch_files/logo2017a.png)
-background-size: 160px
-background-position: 97% 97%
-class: left, middle
-
-## Hipótesis
-
-
-1) Seguidores en sistemas de liderazgo con castigo tendrán mejor performance que sistemas basados en recompensa
-
-2) Líderes basados en el castigo serán más abandonados que los basados en recompensa
-
-3) En sistemas de liderazgo con castigo habrá una mayor intensidad que en sistemas basados en recompensa
 
