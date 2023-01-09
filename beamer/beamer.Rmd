@@ -1,0 +1,368 @@
+---
+title: ""
+author: 
+  - "Francisco Villarroel Riquelme"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+      countdown: 180000
+    seal: false
+    
+---
+class:center, middle, bg_karl
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(knitr)
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#b01333",
+  secondary_color = "#085e9f",
+  inverse_header_color = "#FFFFFF"
+)
+```
+```{css, echo=F}
+h1, h2, h3 {
+  text-align: center;
+}
+```
+
+
+
+```{css, echo = F}
+.reduced_opacity {
+  opacity: 0.1;
+}
+.bg_karl {
+  position: relative;
+  z-index: 1;
+}
+.bg_karl::before {    
+      content: "";
+      background-image: url('https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/05191207/Political-Leaders.png');
+      background-size: cover;
+      position: absolute;
+      top: 78px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.35;
+      z-index: -1;
+}
+```
+
+## Uso de BFI-2-S y XS scale en el estudio de liderazgo político
+
+
+<br>
+<br>
+<br>
+<br>
+
+#### Francisco Villarroel-Riquelme (CICS- UDD) 
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+```{r, echo=FALSE, message = FALSE, out.width="20%", fig.align='center'}
+knitr::include_graphics("logo2017a.png")
+```
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 160px
+background-position: 97% 97%
+class: middle, bg_karl
+
+
+```{css, echo=F}
+h1, h2, h3 {
+  text-align: center;
+}
+```
+
+
+
+```{css, echo = F}
+.reduced_opacity {
+  opacity: 0.1;
+}
+.bg_karl {
+  position: relative;
+  z-index: 1;
+}
+.bg_karl::before {    
+      content: "";
+      background-image: url('https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/03/05191207/Political-Leaders.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+      z-index: -1;
+}
+```
+
+### ¿Cómo es el comportamiento de los seguidores en distintos sistemas de liderazgo?
+
+--
+
+#### Usando la Teoría Evolucionista de Liderazgo (ELT) y la psicología política evolutiva, Queremos investigar el comportamiento de los seguidores en base a distintos sistemas de liderazgo (autoritarios e igualitarios) y según las condiciones de adversidad presentes en el entorno
+
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+### Liderazgo y personalidad
+
+
+.pull-left[
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="70%",fig.align='center'}
+knitr::include_graphics("beamer_files/paper2.png")
+knitr::include_graphics("beamer_files/paper4.png")
+knitr::include_graphics("beamer_files/paper5.png")
+
+```
+
+]
+
+--
+
+
+.pull-right[
+
+### Situación:
+
+- Existe suficiente evidencia que muestra que para entender la relación líder-seguidor, **la personalidad importa**
+- Uno de los test de personalidad más utilizado es el "Big five" (BFI)
+- En los últimos años se han realizado mejoras y subescalas al Big Five y se crea el Big Five Inventory 2 (BFI-2)
+- **Problema: ¡Tiene 60 ítemes!**
+]
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+
+...¿Cómo medir la personalidad usando menos tiempo y de manera confiable?
+
+--
+
+De esta forma `r emo::ji("backhand")`
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, out.width="85%", fig.align='center'}
+knitr::include_graphics("beamer_files/bfi_2_s_xs.png")
+```
+
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+## Forma de construcción
+
+- Primero se arma la escala BFI-2-XS (15 ítemes. 1 por faceta, 3 por dominio)
+
+- Se eleccionan ítemes que:
+
+  - 1) Correlacionen bien entre cada ítem de faceta con la escala total
+
+  - 2) Información total provista por cada retest de la composición de los dos ítemes
+
+  - 3) Reliability del retest de composición en la muestra de college y undergraduated.
+
+  - 4) Correlación inter-item dentro de cada composición de facetas (debe ser poderosa para mostrar consistencia pero no tanta que implique redundancia)
+
+  - 5) Juicios conceptuales de los autores de bondad vs reduncdancia
+
+  - 6) Ños patrones de carga de cada ítem en el AFEy el ACP del BFI-2-S que se extrajo
+
+  - 7) Asegurarse que el BFI-2-S incluya un ítem verdadero y otro falso para cada faceta.
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+## Propiedades psicométricas
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="100%", fig.align='center'}
+
+knitr::include_graphics("beamer_files/propiedades_psicometricas.png")
+
+```
+
+
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+### Pro's y contras (¿cuándo se usa cada cuestionario?)
+
+
+- Ahorro de tiempo que permite integrarlo a investigaciones de de otra forma no podrían medir personalidad
+
+--
+
+- **Una mejora en el tiempo implica una baja en su confiabilidad**. Aproximadamente 10% menos preciso en el BFI-2-S y un 20% en el BFI-2-XS. **Esto implica que correlaciones entre personalidad y otros atributos sean menos que con formularios largos"**.
+
+--
+
+- Formularios cortos cuesta testear efectos más complejos.
+
+--
+
+- Si se busca testear rasgos de personalidad a nivel jerarquico, se sugiere el BFI-2-S. Si sólo se busca a nivel de big five "clásico", el BFI-2-XS está bien.
+
+
+
+---
+class: inversed, center, middle
+background-image: url(https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png)
+background-size: 80px
+background-position: 50% 90%
+
+# ¡Gracias!
+
+
+###fvillarroelr@udd.cl
+
+This slide was created by [**xaringan**](https://github.com/yihui/xaringan) package.
+
+---
+class: inversed, center, middle
+
+
+
+## Apéndices
+
+
+---
+
+### Escala en español BFI-2-S Y BFI-2-XS
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, out.width="80%", fig.align='center'}
+
+knitr::include_graphics("beamer_files/cuestionario_español.png")
+
+```
+
+
+
+
+---
+## Estudio 1: Liderazgo compensatorio y castigador en juegos de coordinación 
+
+**Analizar cómo los mecanismos de retroalimentación afectan el comportamiento de los seguidores**
+
+
+.pull-left[
+
+
+#### Nos enfocaremos en 
+
+- **Performance grupal**: Cómo es el desempeño general del grupo para obtener recursos
+
+- **Emociones**: Tipo y nivel de emociones de los seguidores hacia el líder (ira, miedo, felicidad y tristeza)
+
+- **Tendencia al abandono de líder**: Cuándo los seguidores abandonan a su líder
+
+]
+
+--
+
+.pull-right[ 
+
+#### Métodos
+
+- _lab-in-the-field_ experiment (N=300)
+
+- Exposición de consentimiento informado 
+- Juego de bienes comunes con umbral
+- Preguntas de caracterización sociodemográfica
+- Preguntas sobre consumo de información política, interés y autoidentificación política
+- Escala de timidez
+
+
+]
+
+---
+class: left, middle
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("proyecto_denise_03.png")
+```
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+background-position: 97% 7%
+class: left, middle
+
+###¿Por qué con un juego de bienes públicos?
+
+- Las distintas acciones colectivas requieren inversión de recursos (tiempo, dinero, habilidades, etc)
+- Esta inversión de recursos puede tener resultados positivos o no (efecto del umbral)
+- Los beneficios son para todo el grupo que realizó esa acción colectiva
+- En ciertos contextos, estas se hacen varias veces (juego repetido) y en competencia con otros
+- Dependiendo de los sistemas de liderazgo presentes, el líder puede desplegar estrategias hacia sus seguidores que pueden tener distintos efectos.
+
+---
+class: left, middle
+
+### Características de las condiciones experimentales
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("proyecto_denise_01.png")
+```
+
+---
+class: left, middle
+
+
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("proyecto_denise_02.png")
+```
+
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 160px
+background-position: 97% 97%
+class: left, middle
+
+## Hipótesis
+
+
+1) Seguidores en sistemas de liderazgo con castigo tendrán mejor performance que sistemas basados en recompensa
+
+2) Líderes basados en el castigo serán más abandonados que los basados en recompensa
+
+3) En sistemas de liderazgo con castigo habrá una mayor intensidad que en sistemas basados en recompensa
+
