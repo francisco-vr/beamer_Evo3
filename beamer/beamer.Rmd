@@ -138,7 +138,7 @@ background-size: 170px
 
 --
 
-De esta forma `r emo::ji("backhand")`
+De esta forma: 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, out.width="85%", fig.align='center'}
 knitr::include_graphics("beamer_files/bfi_2_s_xs.png")
@@ -287,6 +287,22 @@ knitr::include_graphics("beamer_files/propiedades_psicometricas.png")
 
 ---
 
+```{r, fig.align='center'}
+
+knitr::include_graphics("beamer_files/Captura de pantalla de 2023-01-10 09-24-11.png")
+
+```
+---
+background-image: url(pitch_files/logo2017a.png)
+background-size: 170px
+
+### Conclusiones del instrumento
+
+- BFI-2-S Es útil y robusto para medir no sólo a nivel de big five sino también a nivel de facetas. **siempre y cuando sean muestras razonablemente grandes**(n = 400)
+
+- Cuando se prueba en muestras menores (ej n=200) pierde precisión en facetas
+
+- El BFI-2-XS sólo puede ser usado a nivel de estructura de Big five
 
 
 
